@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    background-color: #3f4652;
+    color: #ffffff;
+  }
+
+  .dashboard {
+    position: relative;
+    font-family: Arial, sans-serif;
+    color: #162c57;
+    background-color: #3f4652;
+  }
+  
+  .template-container {
+    width: 50%;
+    margin: 0 length 0px;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    max-height: 50px; /* Default height */
+    padding: 10px 0;
+  }
+  
+  .template-container.expanded {
+    max-height: 600px; /* Height when expanded */
+    padding: 1px 0;
+  }
+  
+  .template-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    color: white;
+    height: 50px;
+    border-radius: 10px 100px 0 0;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .template-header:hover {
+    background-color: #b9c2ba;
+  }
+  
+  .plus-icon {
+    font-size: 28px;
+  }
+  
+  .template-container.expanded .template-header {
+    border-radius: 10px 100px 0 0;
+  }
+  
+  
+/* Default εικόνα υποβάθρου */
+.dashboard-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  width: 90%;
+}
+
+.message-image {
+  max-width: 200px;
+  height: auto;
+  opacity: 0.05;
+  filter: grayscale(100%) invert(100%);
+  @media (max-width: 768px) {
+      max-width: 150px;
+  }
+  @media (max-width: 480px) {
+      max-width: 100px;
+  }
+}

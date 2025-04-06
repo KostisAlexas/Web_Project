@@ -1,0 +1,17 @@
+.footer-dimmed {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #888;
+    opacity: 0.9;
+  }
+
+  
+  /* Eναλλακτικά με μειωμένη φωτεινότητα
+  .footer-dimmed {
+      filter: brightness(0.7);
+  }
+
+  */
