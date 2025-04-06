@@ -1,0 +1,84 @@
+.invitation-dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.invitation-list {
+  width: 30%;
+  border-right: 1px solid #ccc;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.invitation-details {
+  width: 70%;
+  padding: 1rem;
+}
+
+.invitation-preview {
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.invitation-preview:hover {
+  background-color: #f0f0f0;
+}
+
+.invitation-preview.selected {
+  border-color: #007bff;
+  background-color: #e7f3ff;
+}
+
+.accept-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.accept-btn:hover {
+  background-color: #218838;
+}
+
+.reject-btn {
+  background-color: #dc3545;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.reject-btn:hover {
+  background-color: #c82333;
+}
+
+.default-image-container {
+  width: 100%;
+  height: 90vh; /* Καλύπτει το 95% του ύψους της οθόνης */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.default-image {
+  width: 50%;
+  height: 60%;
+  object-fit: cover; /* Διατηρεί τις αναλογίες της εικόνας */
+  opacity: 0.1; /* Ρυθμίζει τη διαφάνεια (70% ορατό) */
+  transition: opacity 0.3s ease; /* Ομαλή μετάβαση για το opacity */
+}
+
+/* Προαιρετικό: αν θέλετε να αλλάζει το opacity στο hover
+.default-image:hover {
+  opacity: 1;
+}
+*/

@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #272c33;
+    color: #ecf0f1;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 40px;
+  }
+  
+  /* Button styling */
+  .navbar .button-container {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .navbar button {
+    padding: 8px 16px;
+    background-color: #193e58;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar button:hover {
+    background-color: #2980b9;
+  }
+  
+  .navbar button.active {
+    background-color: #1abc9c;
+  }
+  
+  .navbar button.active:hover {
+    background-color: #16a085;
+  }

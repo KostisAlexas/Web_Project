@@ -1,0 +1,132 @@
+.invitation-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+  background-color: #fff;
+  color: #193e58;
+  cursor: pointer;
+}
+
+.invitation-preview.selected {
+  border-color: #007bff;
+  background-color: #e7f3ff;
+}
+
+.invitation-preview.depricated {
+  background-color: #f7f7f7;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.preview-text {
+  flex-grow: 1;
+}
+
+.sender-name {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.subject {
+  font-size: 14px;
+  margin-top: 0.5rem;
+  color: #193e58;
+}
+
+.date,
+.time {
+  font-size: 12px;
+  color: #193e58;
+  display: block;
+  margin: 5px;
+}
+
+
+/* Media Queries για tablets */
+@media screen and (max-width: 768px) {
+  .invitation-preview {
+      padding: 0.8rem;
+  }
+  
+  .profile-pic {
+      width: 35px;
+      height: 35px;
+      margin-right: 0.8rem;
+  }
+  
+  .subject {
+      font-size: 13px;
+  }
+}
+
+/* Media Queries για smartphones */
+@media screen and (max-width: 480px) {
+  .invitation-preview {
+      padding: 0.6rem;
+      flex-wrap: wrap; /* Επιτρέπει το wrapping για καλύτερη προβολή */
+  }
+  
+  .profile-pic {
+      width: 30px;
+      height: 30px;
+      margin-right: 0.6rem;
+  }
+  
+  .preview-text {
+      flex: 1 1 calc(100% - 100px); /* Δίνει περισσότερο χώρο στο κείμενο */
+  }
+  
+  .sender-name {
+      font-size: 11px;
+  }
+  
+  .subject {
+      font-size: 12px;
+      margin-top: 0.3rem;
+  }
+  
+  .date,
+  .time {
+      font-size: 11px;
+      text-align: right;
+      margin-left: auto;
+  }
+}
+
+/* Media Queries για πολύ μικρές οθόνες */
+@media screen and (max-width: 320px) {
+  .invitation-preview {
+      padding: 0.5rem;
+  }
+  
+  .profile-pic {
+      width: 25px;
+      height: 25px;
+      margin-right: 0.5rem;
+  }
+  
+  .sender-name {
+      font-size: 10px;
+  }
+  
+  .subject {
+      font-size: 11px;
+      margin-top: 0.2rem;
+  }
+  
+  .date,
+  .time {
+      font-size: 10px;
+  }
+}

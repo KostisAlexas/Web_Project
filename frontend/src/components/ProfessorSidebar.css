@@ -1,0 +1,164 @@
+.sidebar {
+    width: 20%; /* Δυναμικό πλάτος */
+    max-width: 250px; /* Μέγιστο πλάτος */
+    min-width: 60px; /* Ελάχιστο πλάτος */
+    background-color: #272c33;
+    color: #ecf0f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+    box-sizing: border-box;
+  }
+  
+  .sidebar-logo {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .sidebar {
+    box-shadow: 7px 0 10px rgba(0, 0, 0, 0.2);
+   }
+  
+  .logo-img {
+    width: 100%; /* Προσαρμογή της εικόνας στο πλάτος του container */
+    height: auto;
+    /*box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Προσθήκη σκιάς */
+  }
+  
+  .menu {
+    width: 100%;
+  }
+  
+  .menu-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ecf0f1;
+    padding: 15px 20px;
+    transition: background-color 0.3s;
+    /*box-shadow: 0 2px 100px #3f4652;*/
+  }
+  
+  /* Hover πάντα αλλάζει το χρώμα */
+  .menu-item:hover {
+    background-color: #193e58;
+   /* box-shadow: 0 1px 20px #193e58;*/
+  }
+  
+  /* Ενεργό κουμπί */
+  .menu-item.active {
+    background-color: #3f4652;
+  }
+  
+  /* Ενεργό κουμπί όταν γίνεται hover */
+  .menu-item.active:hover {
+    background-color: #193e58 !important;
+  }
+  
+  .menu-item img.menu-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .menu-item span {
+    font-size: 1rem;
+  }  
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+    overflow: auto;
+  }
+  
+/* Sidebar dynamic styles */
+.sidebar {
+  transition: width 0.3s;
+  position: relative; /* Για τοποθέτηση του toggle button */
+}
+
+.sidebar.open {
+  width: 20%; /* Κανονικό πλάτος */
+  max-width: 250px;
+}
+
+.sidebar.closed {
+  width: 60px; /* Κλειστό sidebar */
+}
+
+/* Toggle button integrated into sidebar */
+.toggle-sidebar-btn {
+  position: absolute;
+  top: 0; /* Τέρμα πάνω */
+  right: 0; /* Δεξιά ενσωμάτωση */
+  width: 30px; /* Τετράγωνο κουμπί */
+  height: 60px; /* Υψηλότερο για το "αυτάκι" */
+  background-color: #272c33; /* Χρώμα κουμπιού ίδιο με sidebar */
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+  border-radius: 0 5px 5px 0; /* Καμπύλη δεξιά */
+}
+
+.sidebar.closed .toggle-sidebar-btn {
+  background-color: #193e58; /* Χρώμα όταν είναι κλειστό */
+}
+
+.toggle-sidebar-btn:hover {
+  background-color: #3f4652; /* Hover effect */
+}
+
+.toggle-sidebar-btn:focus {
+  outline: none;
+}
+
+/* Sidebar closed adjustments */
+.sidebar.closed .menu-item span {
+  display: none;
+}
+
+.sidebar.closed .logo-img {
+  display: none;
+}
+
+/* "Αυτάκι" όταν το sidebar είναι κλειστό */
+.sidebar.closed .toggle-sidebar-btn {
+  width: 20px; /* Μικρότερη προβολή */
+  height: 50px; /* Περίπου το ίδιο ύψος */
+}
+
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 50px; /* Μειώνεται το πλάτος σε μικρότερες οθόνες */
+    }
+  
+    .menu-item span {
+      display: none; /* Κρύβεται το κείμενο για να εξοικονομηθεί χώρος */
+    }
+  
+    .menu-item i {
+      margin-right: 0; /* Κέντρο εικονιδίων */
+    }
+  
+    .sidebar-logo {
+      width: 50px; /* Μικρότερο μέγεθος εικόνας */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 40px; /* Ακόμα πιο μικρό πλάτος */
+    }
+  
+    .sidebar-logo {
+      display: none; /* Κρύβεται το logo στις πολύ μικρές οθόνες */
+    }
+  }

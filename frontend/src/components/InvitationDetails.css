@@ -1,0 +1,131 @@
+.invitation-details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh; /* Για να κεντραριστεί κάθετα */
+  padding: 5em;
+  background-color: #f9f9f9; /* Απαλό χρώμα φόντου για καλύτερη ορατότητα */
+}
+
+/* Το βασικό κουτί της πρόσκλησης */
+.invitation-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 3rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Οριζόντιο μέγεθος για καλή αναλογία */
+  /*max-width: 900px; /* Μέγιστο πλάτος */
+  text-align: center; /* Κεντράρισμα κειμένου */
+}
+
+.invitation-details {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #193e58;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.invitation-details.locked {
+  background-color: #f7f7f7;
+  color: #a0a0a0;
+}
+
+.sender-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.action-buttons {
+  display: flex;
+  margin-top: 5rem;
+}
+
+.action-buttons .accept-btn,
+.action-buttons .reject-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  background-color: #fff !important;
+}
+
+.action-buttons .accept-btn {
+  color: #28a745 !important;
+  border: 1px solid #28a745 !important;
+}
+
+.action-buttons .accept-btn span {
+  color: #28a745 !important;
+}
+
+.action-buttons .reject-btn {
+  color: #dc3545 !important;
+  border: 1px solid #dc3545 !important;
+}
+
+.action-buttons .reject-btn span {
+  color: #dc3545 !important;
+}
+
+/* Media Queries για μικρές οθόνες */
+@media screen and (max-width: 768px) {
+  .invitation-details {
+      padding: 1.5rem;  /* Μειώνουμε το padding */
+  }
+  
+  .profile-pic {
+      width: 40px;  /* Μικρότερη εικόνα προφίλ */
+      height: 40px;
+  }
+}
+
+/* Για πολύ μικρές οθόνες */
+@media screen and (max-width: 480px) {
+  .invitation-details {
+      padding: 1rem;
+  }
+  
+  .action-buttons {
+      flex-direction: column;  /* Κουμπιά σε κάθετη διάταξη */
+      gap: 0.5rem;  /* Μικρότερο κενό μεταξύ κουμπιών */
+  }
+  
+  .action-buttons .accept-btn,
+  .action-buttons .reject-btn {
+      font-size: 13px;  /* Μικρότερη γραμματοσειρά */
+      padding: 0.4rem 0.8rem;  /* Μικρότερο padding */
+  }
+  
+  .profile-pic {
+      width: 35px;  /* Ακόμα μικρότερη εικόνα προφίλ */
+      height: 35px;
+      margin-right: 0.5rem;  /* Μικρότερο margin */
+  }
+}
+
+/* Για πολύ μικρά κινητά */
+@media screen and (max-width: 320px) {
+  .invitation-details {
+      padding: 0.8rem;
+  }
+  
+  .action-buttons .accept-btn,
+  .action-buttons .reject-btn {
+      font-size: 12px;
+  }
+}
